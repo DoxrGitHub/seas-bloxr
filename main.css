@@ -1,0 +1,98 @@
+body {
+    font-family: 'Fira Code', monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    background-color: #181825 !important;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+header, footer {
+    padding: 20px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+h1 {
+    color: #b695f3;
+    margin-bottom: -10px;
+
+    background-color: #313244;
+    display: inline-block; /* Ensure the width adjusts to the text */
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2em;
+}
+
+
+h2 {
+    overflow: hidden;
+    color: #cba6f7;
+}
+
+article {
+    background-color: #313244;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto; 
+    transition: transform 0.3s ease-in-out;
+}
+
+article:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+}
+
+nav ul li {
+    margin: 0 10px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul li {
+        margin: 5px 0; 
+    }
+}
+
+.ikon {
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.ikon > svg {
+    width: 200vw;
+    height: 200vh;
+}
